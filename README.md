@@ -65,6 +65,24 @@ All 1,797 official test rows. Training-mean baseline MSE: 0.0735163. Scores use 
 
 38 Python tests and eleven Node/real-Chrome tests. Independent active-set NNLS enumeration on 35 tiny random problems, finite-difference gradients, scalar coordinate/objective references, zero/duplicate/budget cases, full six-fit reproduction forbidding test access, frozen hashes before evaluation, all-row holdout/control reproduction, and exact SVG regeneration. Exact certificates add 80 independent rational active-set optima, a sum-of-squares gap identity, subnormal/rounding/tamper controls and 120 cross-language exact witness reproductions. Browser checks compare 120 native/scalar-JavaScript decompositions, 2,048 actual contribution pixels, arbitrary edits, keyboard controls, zero-sweep unfinished bounds, valid/tampered pasted proofs, copy failure/success, download, and expanded 320/390/1280 layouts. Installed-wheel checks import ten modules and execute all ten CLIs outside the checkout, including full training and holdout reproduction.
 
+
+For the full installed replay, run `python examples/check_installed.py` after
+installing NumPy 2.2.6, setuptools and wheel. It builds and installs a wheel in
+a new environment, then runs all 38 existing Python tests outside the checkout.
+Ten installed module origins are checked before and after. The copied tests,
+exporters, figures and static browser bundles contain no library Python source.
+The exact oracles, six-fit reproduction, frozen guards, all-row holdout checks
+and exact figure reproduction stay in that suite.
+
+The command replay covers all ten CLI commands in twelve invocations through
+both `python -m partslab` and the installed `partslab` command. It compares ten
+complete output files, including all six fresh fits, their guard, fresh and
+saved holdout reports, an exact certificate and the full fixed-face export.
+These are source/wheel comparisons in the same runtime, not independent
+numerical or statistical evidence. Run `--section tests` or `--section commands`
+to check either half separately. CI runs both halves as a separate job and
+keeps the original wheel smoke job and its tolerance-based checks.
+
 Original data: Alpaydin & Kaynak (1998), [UCI Optical Recognition of Handwritten Digits](https://archive.ics.uci.edu/dataset/80/optical+recognition+of+handwritten+digits), CC BY 4.0. Original source hashes and license are in `partslab/data/`. Derived bases and summaries are new transformations. Code MIT. Established algorithms, original implementation; no endorsement.
 
 
