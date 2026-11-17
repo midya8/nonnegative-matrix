@@ -1,6 +1,6 @@
-# PartsLab
+# Nonnegative matrix
 
-PartsLab fits nonnegative basis images and coefficients to the original
+Nonnegative matrix fits nonnegative basis images and coefficients to the original
 licensed UCI digits using NumPy. Edit an 8x8 image in the browser to see each
 basis image's contribution and the reconstruction error. The signed PCA and
 SVD controls stay visible, including their lower errors at every fixed rank.
@@ -23,7 +23,7 @@ python examples/export_browser.py
 python examples/render_audit.py
 ```
 
-Try the [live parts inspector](https://midya8.github.io/partslab/), or open `docs/index.html` locally. The browser solves new nonnegative coefficients for arbitrary edited 8x8 pixels. It shows every part's actual contribution, a rescaled basis view, coefficient weights, unclipped reconstruction errors, signed PCA/SVD/mean controls, every fit's descent and exact JSON copy/download. No server, uploads, analytics or remote calls. Twenty original official test rows are included by index, not selected for success. The package has ten CLI subcommands: `demo`, `train`, `evaluate`, `predict`, `audit`, `certify`, `verify-certificate`, `face`, `verify-face`, `face-export`.
+Try the [live parts inspector](https://midya8.github.io/nonnegative-matrix/), or open `docs/index.html` locally. The browser solves new nonnegative coefficients for arbitrary edited 8x8 pixels. It shows every part's actual contribution, a rescaled basis view, coefficient weights, unclipped reconstruction errors, signed PCA/SVD/mean controls, every fit's descent and exact JSON copy/download. No server, uploads, analytics or remote calls. Twenty original official test rows are included by index, not selected for success. The package has ten CLI subcommands: `demo`, `train`, `evaluate`, `predict`, `audit`, `certify`, `verify-certificate`, `face`, `verify-face`, `face-export`.
 
 ## Three fixed-basis calculations
 
